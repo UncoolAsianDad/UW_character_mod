@@ -7,7 +7,10 @@ const ATK = 0x21
 const DEF = 0x22
 const UNARM = 0x23
 const SWD = 0x24
+const MANA = 0x28
 const LORE = 0x29
+const CASTING = 0x2A
+const SEARCHING = 0x2C
 const HP = 0x35
 const HP_2 = 0xDC
 const HPMAX = 0x36
@@ -70,29 +73,23 @@ const data = raw.slice(1, 221)
 const item = raw.slice(221)
 
 const decoded = xor(data, key)
-decoded[STR] = 30
-decoded[DEX] = 30
-decoded[INTE] = 30
-decoded[ATK] = 30
-decoded[DEF] = 30
-decoded[UNARM] = 30
-decoded[SWD] = 30
-decoded[LORE] = 30
+for (var i = 0x1E; i<= 0x34;i++)
+    decoded[i] = 30;
+
 decoded[HP] = 200
 decoded[HP_2] = 200
 decoded[HPMAX] = 200
 decoded[MP] = 200
 decoded[MPMAX] = 200
-decoded[RUNE1] = 255
-decoded[RUNE2] = 255
-decoded[RUNE3] = 255
+decoded[RUNE1] = 0xFF
+decoded[RUNE2] = 0xFF
+decoded[RUNE3] = 0xFF
 decoded[WEIGHT_MAXB] = 0x02
 decoded[WEIGHT_MAXA] = 0xB2
 printPlayer(decoded);
 
 // process.exit(0)
 const encoded = xor(decoded, key);
-console.log(encoded, data, item)
 
 const rawToSave = new Uint8Array(raw.length);
 rawToSave.set(new Uint8Array([key]))
