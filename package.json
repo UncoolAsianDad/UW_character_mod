@@ -1,0 +1,14 @@
+{
+  "name": "SAVE1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brian Ho",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  }
+}
