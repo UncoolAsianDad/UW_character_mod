@@ -7,5 +7,6 @@ A quick typescript project that decodes the save files of Ultima Underworld char
 2. clone the repo to this location and run npm i to install dependencies
 3. run ts-node src/index.ts will set your char to be level 30 for all your stats. (see attachment for a full stat at the end game)
 
+![Character Stats](character.png)
 ![End Game Stats](endgame.png)
 
