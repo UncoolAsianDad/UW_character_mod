@@ -11,3 +11,8 @@ Free Software Disclaimer. Any free software is offered according the warranties 
 
 ![Character Stats](character.png)
 ![End Game Stats](endgame.png)
+
+
+# Credits
+Player File Encoding format provided from 
+https://github.com/vividos/UnderworldAdventures/blob/main/uwadv/docs/uw-formats.txt
